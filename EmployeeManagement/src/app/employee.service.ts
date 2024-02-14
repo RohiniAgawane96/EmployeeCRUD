@@ -8,5 +8,9 @@ export class EmployeeService {
 
   // constructor() { }
   http = inject(HttpClient);
-  
+  api= 'http://localhost:3000/Employee';
+
+  getAllEmployee(){}
+
+  createEmployee(){}
 }

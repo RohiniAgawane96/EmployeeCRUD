@@ -11,10 +11,10 @@ export class AddEmployeeComponent {
   constructor(private fb: FormBuilder) { }
 
   RegistrationForm= this.fb.group({
-    name:[''],
-    email:['',EmailValidator],
-    contact: ['',Validators],
-    gender:['']
+    name: ['', [Validators.required, Validators.minLength(5)]],
+    email: ['', [Validators.required, Validators.email]],
+    contact: ['', [Validators.required, Validators.pattern("^[0-9]{10}$")]],
+    gender: ['', Validators.required]
   })
   
 
