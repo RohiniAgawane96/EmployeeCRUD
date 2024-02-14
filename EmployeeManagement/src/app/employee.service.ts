@@ -1,5 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable, inject } from '@angular/core';
+import { Employee } from './employee';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -8,9 +10,13 @@ export class EmployeeService {
 
   // constructor() { }
   http = inject(HttpClient);
-  api= 'http://localhost:3000/Employee';
+  baseURL= 'http://localhost:3000/Employee';
 
-  getAllEmployee(){}
+  getAllEmployee():Observable<Employee[]>{
+    return this.http.get<Employee[]>(`${this.baseURL}`)
+  }
 
-  createEmployee(){}
+  createEmployee(employee:Employee){
+   return this.http.post(`${this.baseURL}`,employee)
+  }
 }
