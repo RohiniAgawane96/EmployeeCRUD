@@ -21,13 +21,15 @@ import {MatRadioButton, MatRadioModule} from '@angular/material/radio';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatTableModule} from '@angular/material/table';
 import {MatToolbarModule} from '@angular/material/toolbar';
+import { EmployeeListComponent } from './employee-list/employee-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AddEmployeeComponent,
     ViewDetailsComponent,
-    UpdateEmployeeComponent
+    UpdateEmployeeComponent,
+    EmployeeListComponent
   ],
   imports: [
     BrowserModule,
