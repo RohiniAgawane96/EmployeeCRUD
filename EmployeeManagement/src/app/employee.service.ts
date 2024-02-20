@@ -12,11 +12,24 @@ export class EmployeeService {
   http = inject(HttpClient);
   baseURL= 'http://localhost:3000/Employee';
 
-  getAllEmployee():Observable<Employee[]>{
-    return this.http.get<Employee[]>(`${this.baseURL}`)
+  getEmployeesList(): Observable<Employee[]>{
+    return this.http.get<Employee[]>(`${this.baseURL}`);
   }
 
-  createEmployee(employee:Employee){
-   return this.http.post(`${this.baseURL}`,employee)
+  createEmployee(employee: any) {
+    return this.http.post<any>(this.baseURL, employee);
   }
+
+  getEmployeeById(id:number){
+    return this.http.get<any>(`${this.baseURL}/${id}`);
+  }
+
+  update(id: number, employee: any) {
+    return this.http.put<any>(`${this.baseURL}/${id}`, employee);
+  }  
+
+  delete(id:number){
+    return this.http.delete<any>(`${this.baseURL}/${id}`);
+  }
+  
 }

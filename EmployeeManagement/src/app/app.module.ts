@@ -22,6 +22,7 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatTableModule} from '@angular/material/table';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { EmployeeListComponent } from './employee-list/employee-list.component';
+import { MatNativeDateModule } from '@angular/material/core';
 
 @NgModule({
   declarations: [
@@ -50,6 +51,7 @@ import { EmployeeListComponent } from './employee-list/employee-list.component';
     MatCardModule,
     MatDialogModule,
     MatIconModule,    
+    MatNativeDateModule
   ],
   providers: [],
   bootstrap: [AppComponent]

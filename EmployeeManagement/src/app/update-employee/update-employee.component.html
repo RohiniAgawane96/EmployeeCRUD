@@ -1,0 +1,45 @@
+<mat-card>
+    <mat-card-header>ADD EMPLOYEE</mat-card-header>
+    <mat-card-content>
+        <form [formGroup]="RegistrationForm" (ngSubmit)="onSubmit()">
+            <mat-form-field class="example-full-width">
+                <mat-label>Name:</mat-label>
+                <input type="" matInput placeholder=" Enter Your Name" formControlName="name"/>              
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width">
+                <mat-label>Email:</mat-label>
+                <input type="email" matInput placeholder=" Enter Your Email" formControlName="email"/>
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width">
+                <mat-label>Contact Number:</mat-label>
+                <input type="number" matInput placeholder=" Enter Your Contact Number" formControlName="contact">
+            </mat-form-field>
+
+             <div class="misc-bottom-padding">
+                <mat-label>Gender:</mat-label>
+                <mat-radio-group  aria-label="Select an option" formControlName="gender">
+                    <mat-radio-button value="Male">Male</mat-radio-button>
+                    <mat-radio-button value="Female">Female</mat-radio-button>
+                    <mat-radio-button value="other">Other</mat-radio-button>
+                </mat-radio-group>
+            </div>
+            
+
+            <div>
+             <mat-label>Enter Date of Birth</mat-label>
+             <input type="date">
+            </div>
+            
+            
+            <div class="example-label"></div>
+            <div class="example-button-row">
+                <button mat-raised-button color="primary" type="submit" >Add Employee</button>
+                <button routerLink="/list" mat-raised-button color="warn" type="submit" >cancel</button>
+            </div> 
+        </form>
+    </mat-card-content>
+</mat-card>
+<!-- disabled="RegistrationForm.invalid" -->
+  

@@ -4,4 +4,5 @@ export interface Employee {
     email:string;
     contact:number;
     gender:string;
+    DOB:Date;
 }

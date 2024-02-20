@@ -7,11 +7,10 @@ import { UpdateEmployeeComponent } from './update-employee/update-employee.compo
 import { EmployeeListComponent } from './employee-list/employee-list.component';
 
 const routes: Routes = [
-  // {path:'',component:AppComponent},
-  {path:'add',component:AddEmployeeComponent},
-  {path:'view', component:ViewDetailsComponent},
-  {path:'update', component:UpdateEmployeeComponent},
-  {path:'list', component:EmployeeListComponent}
+  { path: 'add', component: AddEmployeeComponent },
+  { path: 'view', component: ViewDetailsComponent },
+  { path: 'update/:id', component: UpdateEmployeeComponent }, // Define the update route with parameter id
+  { path: 'list', component: EmployeeListComponent }
 ];
 
 @NgModule({
