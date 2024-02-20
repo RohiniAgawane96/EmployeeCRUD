@@ -10,6 +10,7 @@
             <th>Email</th>
             <th>Contact Number</th>
             <th>Gender</th>
+            <th>Date Of Birth</th>
         </tr>
     </thead>
     <tbody>
@@ -18,7 +19,8 @@
             <td>{{ employee.name }}</td>
             <td>{{ employee.email }}</td>
             <td>{{ employee.contact }}</td>
-            <td>{{ employee.gender }}</td>
+            <td>{{ employee.gender }}</td>            
+            <td>{{ employee.DOB }}</td>            
             <td>
                 <!-- Buttons for actions -->
                 <button (click) = "updateEmployee(employee.id)" class = "btn btn-primary"> Update</button>
